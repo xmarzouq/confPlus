@@ -1,0 +1,107 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        Int        @id @default(autoincrement())
+  firstName String
+  lastName  String
+  email     String
+  password  String
+  author    Author?
+  reviewer  Reviewer?
+  organizer Organizer?
+}
+
+model Author {
+  userId        Int          @unique
+  isPresenter   Boolean      @default(false)
+  user          User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  institution   Institution? @relation(fields: [affiliationId], references: [id])
+  affiliationId Int?
+  paper         Paper?       @relation(fields: [paperId], references: [id], onDelete: Cascade)
+  paperId       String?
+}
+
+model Reviewer {
+  userId  Int     @unique
+  user    User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  paper   Paper?  @relation(fields: [paperId], references: [id], onDelete: Cascade)
+  paperId String?
+}
+
+model Organizer {
+  userId Int  @unique
+  user   User @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Institution {
+  id      Int      @id @default(autoincrement())
+  name    String
+  authors Author[]
+}
+
+model ConferenceDates {
+  id       Int        @id @default(autoincrement())
+  date     DateTime
+  Schedule Schedule[]
+  Session  Session[]
+}
+
+model Location {
+  id       Int        @id @default(autoincrement())
+  name     String
+  Schedule Schedule[]
+  Session  Session[]
+}
+
+model Schedule {
+  id         String          @id @default(cuid())
+  title      String
+  location   Location        @relation(fields: [locationId], references: [id])
+  locationId Int
+  date       ConferenceDates @relation(fields: [dateId], references: [id])
+  dateId     Int
+  sessions   Session[]
+}
+
+model Session {
+  id         String          @id @default(cuid())
+  title      String
+  location   Location        @relation(fields: [locationId], references: [id])
+  locationId Int
+  date       ConferenceDates @relation(fields: [dateId], references: [id])
+  dateId     Int
+  papers     Paper[]
+  Schedule   Schedule?       @relation(fields: [ScheduleId], references: [id])
+  ScheduleId String?
+}
+
+model Paper {
+  id        String     @id @default(cuid())
+  title     String
+  abstract  String
+  file      String
+  authors   Author[]
+  reviews   Review[]
+  Session   Session    @relation(fields: [sessionId], references: [id])
+  sessionId String
+  fromTime  DateTime
+  toTime    DateTime
+  Reviewer  Reviewer[]
+}
+
+model Review {
+  id                Int    @id @default(autoincrement())
+  overallEvaluation String
+  paperContribution String
+  paperStrengths    String
+  paperWeaknesses   String
+  paper             Paper  @relation(fields: [paperId], references: [id])
+  paperId           String
+}

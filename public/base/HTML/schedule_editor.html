@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Conference App</title>
+
+		<!-- google font link -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- the style sheet -->
+		<link rel="stylesheet" href="../styles/style.css" />
+		<script
+			src="https://kit.fontawesome.com/1c3d6e79c0.js"
+			crossorigin="anonymous"
+		></script>
+		<script></script>
+	</head>
+	<body>
+		<h1>Conference Schedule Editor</h1>
+		<div>
+			<label for="schedule-dropdown">Select a schedule:</label>
+			<select id="schedule-dropdown">
+				<option value="">New Schedule</option>
+				<!-- Load schedules from schedule.json and populate the dropdown options -->
+			</select>
+			<div id="new-schedule" style="display: none">
+				<label for="new-schedule-name">Schedule Title:</label>
+				<input type="text" id="new-schedule-name" />
+			</div>
+		</div>
+		<div id="schedules"></div>
+		<div id="sessions" style="display: none" class=".paper-sep-card">
+			<label for="session-dropdown">Sessions:</label>
+			<select id="session-dropdown" value="">
+				<option value="">Select a session</option>
+			</select>
+		</div>
+		<button id="add-session" style="display: none" class="btns">
+			Add Session
+		</button>
+
+		<div style="display: none" id="sessionBtns">
+			<button id="edit-session-button" class="btns">Edit Session</button>
+			<button id="delete-session-button" class="btns">Delete Session</button>
+		</div>
+		<form id="session-form" class="forms" style="display: none">
+			<div>
+				<label for="session-title-input">Session Title:</label>
+				<input type="text" id="session-title-input" required />
+			</div>
+
+			<div>
+				<label for="location-dropdown">Location:</label>
+				<select id="location-dropdown" required>
+					<!-- Load locations from locations.json and populate the dropdown options -->
+				</select>
+			</div>
+
+			<div>
+				<label for="date-dropdown">Date:</label>
+				<select id="date-dropdown" required>
+					<!-- Load dates from conference-dates.json and populate the dropdown options -->
+				</select>
+			</div>
+
+			<div>
+				<label for="papers-dropdown">Select papers:</label>
+				<select id="papers-dropdown" multiple required>
+					<!-- Load accepted papers from papers.json and populate the dropdown options -->
+				</select>
+			</div>
+
+			<div>
+				<label for="from-time-input">From Time:</label>
+				<input type="time" id="from-time-input" required />
+			</div>
+
+			<div>
+				<label for="to-time-input">To Time:</label>
+				<input type="time" id="to-time-input" required />
+			</div>
+			<button id="update-session-button" type="submit" class="btns">
+				Submit
+			</button>
+		</form>
+	</body>
+</html>

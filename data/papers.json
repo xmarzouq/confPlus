@@ -1,0 +1,75 @@
+[
+    {
+        "id": "211d3098-62c5-4f33-a048-75442f05b1ed",
+        "title": "test",
+        "abstract": "test",
+        "authors": [
+            {
+                "firstName": "Mohamed",
+                "lastName": "Ali",
+                "email": "test@test.com",
+                "affiliation": "1",
+                "isPresenter": true
+            }
+        ],
+        "file": "file-1682632405490-908737256.pdf",
+        "reviewers": [
+            3,
+            4
+        ],
+        "reviews": [
+            {
+                "overallEvaluation": "2",
+                "paperContribution": "5",
+                "paperStrengths": "sss",
+                "paperWeaknesses": "ccc"
+            }
+        ]
+    },
+    {
+        "id": "11e908b3-ae76-4dfe-b4d6-758d58237c70",
+        "title": "SECOND PAPER",
+        "abstract": "ABSTRACT",
+        "authors": [
+            {
+                "firstName": "FIRST",
+                "lastName": "LAST",
+                "email": "vv@email.com",
+                "affiliation": "3",
+                "isPresenter": true
+            }
+        ],
+        "file": "file-1686171570996-290904840.pdf",
+        "reviewers": [
+            3,
+            13
+        ]
+    },
+    {
+        "id": "022ef1f7-0ca1-4e19-b940-fe280b8cd4ac",
+        "title": "THIRD",
+        "abstract": "THIRD THIRD THIRD THIRD THIRD THIRD THIRD THIRD THIRD THIRD THIRD THIRD THIRD THIRD ",
+        "authors": [
+            {
+                "firstName": "NAME",
+                "lastName": "LAST",
+                "email": "nnnn@email.com",
+                "affiliation": "2",
+                "isPresenter": true
+            }
+        ],
+        "file": "file-1686172936656-188583955.pdf",
+        "reviewers": [
+            11,
+            13
+        ],
+        "reviews": [
+            {
+                "overallEvaluation": "2",
+                "paperContribution": "4",
+                "paperStrengths": "LOREM",
+                "paperWeaknesses": "LOREM"
+            }
+        ]
+    }
+]

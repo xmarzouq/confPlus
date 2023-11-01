@@ -1,0 +1,172 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>ConfPlus</title>
+
+		<!-- google font link -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- the style sheet -->
+		<link rel="stylesheet" href="../styles/style.css" />
+		<script
+			src="https://kit.fontawesome.com/1c3d6e79c0.js"
+			crossorigin="anonymous"
+		></script>
+		<script></script>
+	</head>
+
+	<body>
+		<header>
+			<a href="index.html">
+				<img id="logo-header" src="../img/logo-light.png" alt="Logo Image" />
+			</a>
+			<div id="navigation">
+				<nav id="navbar">
+					<ul id="header-list">
+						<li><a class="header-list-item" href="index.html">Home</a></li>
+						<li><a class="header-list-item" href="#club-info">About Us</a></li>
+						<li>
+							<a class="header-list-item" href="#" id="login-link">Login</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<div class="top-container" class="center-container">
+			<div id="header-div-text">
+				<h1 id="header-title">
+					Welcome to
+					<span id="club-text"> >ConfPlus< </span>
+				</h1>
+				<h1>Conference Management System</h1>
+				<p id="club-disc">
+					Amazing event with inspiring speakers, cutting-edge topics, and
+					incredible networking opportunities
+				</p>
+
+				<div id="btns-div">
+					<button id="contact-us-btn" class="btns">Contact Us</button>
+					<button id="about-us-btn" class="btns">About Us</button>
+				</div>
+			</div>
+			<div>
+				<img id="student-img" src="../img/about-2.jpg" alt="Student Image" />
+			</div>
+		</div>
+
+		<main class="main-content" id="main">
+			<div>
+				<h1 id="articles-head">Conference Schedule</h1>
+			</div>
+			<section id="conference-schedule" style="display: block">
+				<div>
+					<label for="dates-dropdown">Filter by date:</label>
+					<select id="dates-dropdown">
+						<option value="">All Dates</option>
+					</select>
+				</div>
+
+				<div id="schedule-container">
+					<!-- Schedule will be populated here -->
+				</div>
+			</section>
+		</main>
+		<aside>
+			<div>
+				<section class="aside-section" id="tag">
+					<h2>Tags</h2>
+					<div class="tags">
+						<a href="">#webdev</a>
+						<a href="">#security</a>
+						<a href="">#robotics</a>
+					</div>
+				</section>
+				<section class="aside-section" id="contacts">
+					<h2>Let's Talk</h2>
+					<div>
+						<p>
+							Do you want to learn more about the club and how you can join us?
+							Let us have a conversation.
+						</p>
+						<p id="socials">
+							<i class="fa fa-instagram"></i>
+							<i class="fa fa-twitter"></i>
+							<i class="fa fa-facebook"></i>
+							<i class="fa fa-twitch"></i>
+						</p>
+					</div>
+				</section>
+				<section class="aside-section" id="rss">
+					<h2>RSS</h2>
+					<div>
+						<form action="">
+							<p>
+								Subscribe to our newsletter to be among the first to keep up
+								with the latest updates.
+							</p>
+							<input
+								id="email-feed"
+								type="email"
+								placeholder="Email address"
+								name="mail"
+								required
+							/>
+							<button id="email-btn" class="btns">Subscribe</button>
+						</form>
+					</div>
+				</section>
+			</div>
+		</aside>
+		<footer>
+			<div class="footer-container center-container">
+				<div id="club-info">
+					<a href="#"
+						><img class="logo" src="../img/logo-light.png" alt=""
+					/></a>
+					<p id="foorter-text">Thanks for visiting our website. You can</p>
+					<span>
+						email us -
+						<a id="email-footer" href=""> info@confplus.com</a>
+					</span>
+				</div>
+				<div id="quick-links">
+					<nav>
+						<h4>Quick Links</h4>
+						<ul class="nav-list">
+							<li><a href="">Join Us</a></li>
+							<li><a href="">About Us</a></li>
+							<li><a href="">Contact Us</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div id="communication">
+					<nav>
+						<h4>Communication</h4>
+						<ul class="nav-list">
+							<li><a href="">Facebook</a></li>
+							<li><a href="">Twitter</a></li>
+							<li><a href="">Instagram</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<p>
+				&copy; Copyright 2023
+				<span id="course-name">
+					<a href="">CMPS350 Web Dev</a>
+				</span>
+			</p>
+		</footer>
+		<script src="../scripts/script.js"></script>
+	</body>
+</html>
