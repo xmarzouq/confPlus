@@ -30,11 +30,7 @@ ConfPlus is a Conference Management System designed to facilitate the organizati
 
 1. Start the development server with `npm run dev`.
 
-2. Access the application at `http://localhost:3000`.
-
-## Contributing
-
-We welcome contributions! Please check our [contributing guidelines](CONTRIBUTING.md) for details on how to get involved.
+2. Access the application at `http://localhost:<the opened port>`.
 
 ## License
 
